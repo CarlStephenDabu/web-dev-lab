@@ -1,0 +1,79 @@
+/* Mini Project About Page Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+}
+
+.top-section {
+    background: #4CAF50;
+    color: white;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+}
+
+.top-section h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.top-section p {
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.middle-section {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    padding: 30px 20px;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.story {
+    flex: 1 1 300px;
+    font-size: 1.1em;
+    color: #333;
+    padding-right: 20px;
+}
+
+.image {
+    flex: 1 1 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.bottom-section {
+    background: #fff;
+    padding: 30px 20px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-top: 10px;
+}
+
+.value {
+    background: #e8f5e9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #2e7d32;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
