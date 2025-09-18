@@ -85,3 +85,25 @@ h1, h2 {
 p {
     text-align: center;
 }
+li {
+    list-style: none;
+    text-align: center;
+    margin: 8px 0;
+}
+
+li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #bb3b3b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+
+li a:hover {
+    background: #a12f2f;
+    transform: scale(1.05);
+}
