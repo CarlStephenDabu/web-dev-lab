@@ -4,21 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recycling</title>
-    <link rel="stylesheet" href="recycle.css">
+    
 </head>
 <body>
     <h1>Recycling</h1>
-    <p>Recycling is the process of converting waste materials into new materials and objects. It helps to reduce the consumption of fresh raw materials, decrease energy usage, lower greenhouse gas emissions, and minimize pollution. Here are some key points about recycling:</p>
+    <p>Recycling is the process of converting waste materials into new materials and objects. It is an essential component of modern waste management and environmental conservation efforts. Recycling helps to reduce the amount of waste sent to landfills, conserve natural resources, save energy, and reduce pollution.</p>
 
     <h2>Why is it important?</h2>
     <p>Recycling is crucial because it reduces pollution, waste, and the need for natural resources.  We can reuse items like paper, plastics, and metals through recycling, which lessens the demand for fresh resource extraction or mining.  This reduces the environmental damage brought on by the production of new goods in addition to saving energy.  Recycling also reduces the amount of waste that ends up in landfills, which lowers the possibility of soil, water, and air contamination.  Recycling eventually promotes a circular economy that is more sustainable by reusing resources instead of throwing them away.</p>
 
-    <button>Know What Can Be Recycled</button>
-    <button>Clean Your Containers</button>
-    <button>Separate Materials</button>
-    <button>Avoid Wishcycling</button>
-    <button>Use Recyclable Packaging</button>
+   
+    <button class="recycling-btn" onclick="showContent()">Learn More About Recycling</button>
 
     
+    <div class="hidden-content" id="content">
+        <h3>Why Recycling Matters</h3>
+        <p>Recycling helps conserve resources, reduce waste, and save energy. Here are a few ways recycling makes a difference:</p>
+
+        <div>
+            <img src="https://d1ef7ke0x2i9g8.cloudfront.net/hong-kong/_large700/These-Things-Can-Be-Recycled.webp" alt="Know What Can Be Recycled">
+            <p></p>
+        </div>
+        
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQu_PjPSoZXTdnHODtzIwm5z8qSiHr9hbd0w&s" alt="Clean Your Containers">
+            <p></p>
+        </div>
+
+        <div>
+            <img src="https://recyclenation.com/wp-content/uploads/2015/03/recyclingbins.jpg" alt="Separate Materials">
+            <p></p>
+        </div>
+
+        <div>
+            <img src="https://substackcdn.com/image/fetch/$s_!8NtX!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F01d9e598-2042-40a1-ab03-330e62f208e9_1024x1024.png" alt="Wishcycling">
+            <p></p>
+        </div>
+
+        <div>
+            <img src="https://a.storyblok.com/f/102007/768x432/94c9316db2/sustainable-packaging-paper-eco-friendly-disposable-tableware-plates-cups-bowls-recycling-signs.jpg" alt="Use Recyclable Packaging">
+            <p></p>
+        </div>
+    </div>
+    
+
+    <script>
+    
+        function showContent() {
+            var content = document.getElementById('content');
+            content.style.display = 'block';
+        }
+    </script>
+     <ul style="text-align: center; list-style: none; padding: 0; margin: 0;">
+  <li>
+    <a href="Sustainable Living Tips.html" 
+       style="display: inline-block; 
+              padding: 10px 20px; 
+              background-color: #4CAF50; 
+              color: white; 
+              text-decoration: none; 
+              border-radius: 5px; 
+              font-weight: bold;">
+      HOME
+    </a>
+  </li>
+</ul>
+    <link rel="stylesheet" href="recycle.css">
 </body>
-</html>
+</html>>
