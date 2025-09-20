@@ -1,0 +1,27 @@
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            margin: 40px auto;
+            max-width: 700px;
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        h1 {
+            color: #388e3c;
+        }
+        p {
+            color: #444;
+            font-size: 1.1em;
+        }
+        video {
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(56,142,60,0.1);
+        }
