@@ -1,0 +1,51 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #e0ffe0 0%, #f8fff8 100%);
+    margin: 0;
+    padding: 0;
+    color: #2e4d2e;
+}
+
+
+h1 {
+    text-align: center;
+    color: #388e3c;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #2e7d32;
+    margin-left: 20px;
+}
+
+
+ul {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #ffffffcc;
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-shadow: 0 2px 8px #b2dfdb55;
+    font-size: 1.1em;
+}
+a[href="Sustainable Living Tips.html"] {
+    display: block;
+    margin: 30px auto 0 auto; /* Center horizontally */
+    width: 120px;
+    text-align: center;
+    background: #66bb6a;
+    color: #fff !important;
+    border-radius: 8px;
+    padding: 10px 0;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 8px #b2dfdb33;
+    transition: background 0.2s;
+}
+
+a[href="Sustainable Living Tips.html"]:hover {
+    background: #388e3c;
+}
+   
+
