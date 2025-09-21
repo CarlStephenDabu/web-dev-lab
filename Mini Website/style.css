@@ -107,3 +107,12 @@ li a:hover {
     background: #a12f2f;
     transform: scale(1.05);
 }
+h1 {
+    border: #fff solid 3px;
+    border-radius: 10px;
+    padding: 10px;
+    background: #bb3b3b;
+    width: fit-content;
+    margin: 0 auto 20px auto;
+    font-size: 2em;
+}
