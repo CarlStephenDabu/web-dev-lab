@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Grid Activity – Full</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-body-tertiary">
+  <header class="py-4 border-bottom bg-white">
+    <div class="container">
+      <h1 class="h3 mb-0">Bootstrap 5 Grid – Step-by-Step</h1>
+      <p class="text-secondary mb-0">Play with the grid by resizing your browser.</p>
+    </div>
+  </header>
+
+  <main class="container py-5">
+
+    <section class="mb-5">
+      <h2 class="h5 mb-3">Equal Columns</h2>
+      <div class="row">
+        <div class="col-md bg-white border p-3">Column A</div>
+        <div class="col-md bg-white border p-3">Column B</div>
+        <div class="col-md bg-white border p-3">Column C</div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h5 mb-3">12-Column Sizing</h2>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 bg-white border p-3">1</div>
+        <div class="col-12 col-md-6 col-lg-4 bg-white border p-3">2</div>
+        <div class="col-12 col-md-6 col-lg-4 bg-white border p-3">3</div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h5 mb-3">Gutters (g-*)</h2>
+      <div class="row g-0 mb-3">
+        <div class="col-6 bg-white border p-3">g-0 (tight)</div>
+        <div class="col-6 bg-white border p-3">g-0 (tight)</div>
+      </div>
+      <div class="row g-3">
+        <div class="col-6 bg-white border p-3">g-3 (roomy)</div>
+        <div class="col-6 bg-white border p-3">g-3 (roomy)</div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h5 mb-3">Step 4: row-cols Utilities</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+        <div class="col"><div class="bg-white border p-3 h-100">Card 1</div></div>
+        <div class="col"><div class="bg-white border p-3 h-100">Card 2</div></div>
+        <div class="col"><div class="bg-white border p-3 h-100">Card 3</div></div>
+        <div class="col"><div class="bg-white border p-3 h-100">Card 4</div></div>
+        <div class="col"><div class="bg-white border p-3 h-100">Card 5</div></div>
+        <div class="col"><div class="bg-white border p-3 h-100">Card 6</div></div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h5 mb-3"> Alignment</h2>
+      <div class="row align-items-center justify-content-center" style="min-height: 120px;">
+        <div class="col-10 col-sm-6 col-lg-4">
+          <div class="bg-white border p-4 text-center">Perfectly centered 🎯</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h5 mb-3"> Offsets vs Auto Margins</h2>
+      <div class="row mb-3">
+        <div class="col-12 col-md-8 offset-md-2 bg-white border p-3">Offset on md+ (8/12 centered)</div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-8 mx-auto bg-white border p-3">Same effect with mx-auto</div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h5 mb-3">Step 7: Order</h2>
+      <div class="row g-3">
+        <div class="col-md-6 order-2 order-md-1 bg-white border p-3">Content (order 1 on md+)</div>
+        <div class="col-md-6 order-1 order-md-2 bg-white border p-3">Image (order 2 on md+)</div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h5 mb-3"> Nested Rows</h2>
+      <div class="row g-3">
+        <div class="col-lg-6">
+          <div class="bg-white border p-3 mb-3">Parent Left</div>
+          <div class="row g-2">
+            <div class="col-6"><div class="bg-white border p-3">Nested 1</div></div>
+            <div class="col-6"><div class="bg-white border p-3">Nested 2</div></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-white border p-3 h-100">Parent Right</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h5 mb-3"> Gallery</h2>
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-2">
+        <div class="col"><div class="ratio ratio-1x1 bg-white border d-flex align-items-center justify-content-center">1x1</div></div>
+        <div class="col"><div class="ratio ratio-1x1 bg-white border d-flex align-items-center justify-content-center">1x1</div></div>
+        <div class="col"><div class="ratio ratio-1x1 bg-white border d-flex align-items-center justify-content-center">1x1</div></div>
+        <div class="col"><div class="ratio ratio-1x1 bg-white border d-flex align-items-center justify-content-center">1x1</div></div>
+        <div class="col"><div class="ratio ratio-1x1 bg-white border d-flex align-items-center justify-content-center">1x1</div></div>
+        <div class="col"><div class="ratio ratio-1x1 bg-white border d-flex align-items-center justify-content-center">1x1</div></div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h5 mb-3"> Feature Highlights</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="bg-white border p-4 h-100">
+            <div class="fs-2">⚡</div>
+            <h3 class="h6 mt-2 mb-1">Fast</h3>
+            <p class="mb-0 text-secondary">Describe the benefit here.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="bg-white border p-4 h-100">
+            <div class="fs-2">🔒</div>
+            <h3 class="h6 mt-2 mb-1">Secure</h3>
+            <p class="mb-0 text-secondary">Describe the benefit here.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="bg-white border p-4 h-100">
+            <div class="fs-2">🎯</div>
+            <h3 class="h6 mt-2 mb-1">Precise</h3>
+            <p class="mb-0 text-secondary">Describe the benefit here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-4 border-top">
+    <div class="container small text-secondary">
+      Built with Bootstrap 5.3.3 CDN. Try changing classes to see how the grid responds.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
