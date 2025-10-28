@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Event</title>
+</head>
+<body>
+  <h2>Enter Your Name</h2>
+  <input type="text" id="username" placeholder="Type your name">
+  <button onclick="thankUser()">Submit</button>
+
+  <script>
+    function thankUser() {
+      let name = document.getElementById("username").value;
+      alert("Thank you, " + name + "!");
+    }
+  </script>
+</body>
+</html

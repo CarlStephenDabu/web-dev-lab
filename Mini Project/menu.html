@@ -3,34 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Kiwi's Cafe Menu</title>
+  <title>Kiwi's Cafe Menu</title>
   <link rel="stylesheet" href="menu-style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-  <h1>Kiwi's Cafe Menu</h1>
-  <div class="menu">
-    <div class="menu-item">
-      <h2>Coffee</h2>
-      <p class="price">Espresso PHP 110</p>
-      <p class="price">Breve PHP 105</p>
-      <p class="price">Mocha PHP 135</p>
-      <p class="price">Macchiato PHP 100</p>
-      <p class="price">Cappuchino PHP 120</p>
-      <p class="price">Americano PHP 115</p>
-    </div>
-    <div class="menu-item">
-      <h2>Hot</h2>
-      <p class="price">Daily Dark Roast PHP 120</p>
-      <p class="price">Hot Chocolate PHP 60</p>
-      <p class="price">Cafe Au lait PHP 135</p>
-    </div>
-    <div class="menu-item">
-      <h2>Pastry</h2>
-      <p class="price">Bagel PHP 35</p>
-      <p class="price">Muffin PHP 25 </p>
-      <p class="price">Breakfast Sandwich PHP 30</p>
-      <p class="price">Croissant PHP 40</p>
+<body class="bg-light">
+
+  <div class="container my-5">
+    <h1 class="text-center mb-4">☕ Kiwi's Cafe Menu</h1>
+
+    
+    <div id="menu-list" class="row g-4"></div>
+
+    <div class="mt-5 p-3 bg-white rounded shadow-sm">
+      <h2>Order Summary</h2>
+      <p id="order-summary">No orders yet.</p>
     </div>
   </div>
+
+  <script src="menu.js"></script>
 </body>
 </html>

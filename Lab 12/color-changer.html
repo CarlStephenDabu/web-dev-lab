@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Changer</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding:24px; }
+    #controls { display:flex; gap:8px; align-items:center; }
+    select, button { padding:8px 10px; font-size:1rem; }
+    #preview { width:40px; height:24px; border:1px solid #ccc; border-radius:4px; }
+  </style>
+</head>
+<body>
+  <h2>Choose a Background Color</h2>
+
+  <div id="controls">
+    <label for="color-select" class="visually-hidden">Background color</label>
+    <select id="color-select" aria-label="Choose background color">
+      <option value="white">White</option>
+      <option value="lightblue">Light Blue</option>
+      <option value="lightgreen">Light Green</option>
+      <option value="#fff5cc">Soft Yellow</option>
+      <option value="#f0e6ff">Lavender</option>
+      <option value="#f8d7da">Soft Pink</option>
+    </select>
+    <div id="preview" aria-hidden="true"></div>
+    <button id="applyBtn">Apply</button>
+  </div>
+
+  <script>
+    const select = document.getElementById('color-select');
+    const applyBtn = document.getElementById('applyBtn');
+    const preview = document.getElementById('preview');
+    const STORAGE_KEY = 'bgColorChoice';
+
+    function updatePreview() {
+      preview.style.backgroundColor = select.value;
+      preview.title = select.options[select.selectedIndex].text;
+    }
+
+    function applyColor(save = true) {
+      document.body.style.backgroundColor = select.value;
+      if (save) localStorage.setItem(STORAGE_KEY, select.value);
+    }
+
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) select.value = saved;
+      updatePreview();
+      applyColor(false);
+    });
+
+   
+    select.addEventListener('input', updatePreview);
+   
+    applyBtn.addEventListener('click', () => applyColor(true));
+    
+    select.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        applyColor(true);
+      }
+    });
+  </script>
+</body>
+</html>

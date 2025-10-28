@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Table</title>
+  <style>
+    table {
+      width: 60%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">Product Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price (₱)</th>
+      </tr>
+    </thead>
+    <tbody id="table-body"></tbody>
+  </table>
+
+  <script>
+    let products = [
+      { name: "Coffee Beans", quantity: 10, price: 150 },
+      { name: "Croissant", quantity: 5, price: 45 },
+      { name: "Milk Tea", quantity: 8, price: 80 }
+    ];
+
+    let tbody = document.getElementById("table-body");
+
+    for (let i = 0; i < products.length; i++) {
+      let row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${products[i].name}</td>
+        <td>${products[i].quantity}</td>
+        <td>${products[i].price}</td>
+      `;
+      tbody.appendChild(row);
+    }
+  </script>
+</body>
+</html>
