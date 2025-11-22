@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #0f0f0f;
+            font-family: "Courier New", monospace;
+            color: white;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+
+        .clock-container {
+            padding: 20px 40px;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 
+                0 0 10px #00ffc8,
+                0 0 20px #00ffc8,
+                inset 0 0 20px #00ffc8;
+        }
+
+        #clock {
+            font-size: 42px;
+            letter-spacing: 4px;
+            text-align: center;
+            color: #00ffc8;
+            text-shadow: 
+                0 0 10px #00ffc8,
+                0 0 20px #00ffc8;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Digital Clock</h2>
+
+    <div class="clock-container">
+        <div id="clock">00:00:00</div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+
+            let hours = String(now.getHours()).padStart(2, '0');
+            let minutes = String(now.getMinutes()).padStart(2, '0');
+            let seconds = String(now.getSeconds()).padStart(2, '0');
+
+            document.getElementById("clock").textContent =
+                `${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+</body>
+</html>
