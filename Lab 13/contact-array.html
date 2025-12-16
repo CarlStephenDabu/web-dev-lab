@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Array</title>
+</head>
+<body>
+
+<h2>Contact Form</h2>
+
+<form onsubmit="saveMessage(event)">
+  <input type="text" id="name" placeholder="Name"><br><br>
+  <textarea id="message" placeholder="Message"></textarea><br><br>
+  <button type="submit">Submit</button>
+</form>
+
+<h3>Messages:</h3>
+<ul id="list"></ul>
+
+<script>
+let contacts = [];
+
+function saveMessage(event) {
+  event.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let message = document.getElementById("message").value;
+
+  contacts.push({ name, message });
+
+  let list = document.getElementById("list");
+  list.innerHTML = "";
+
+  contacts.forEach(item => {
+    let li = document.createElement("li");
+    li.textContent = item.name + ": " + item.message;
+    list.appendChild(li);
+  });
+}
+</script>
+
+</body>
+</html>

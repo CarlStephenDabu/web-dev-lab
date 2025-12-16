@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reservation</title>
+</head>
+<body>
+
+<h2>Reservation Form</h2>
+
+<form onsubmit="reserve(event)">
+  <input type="text" id="name" placeholder="Name"><br><br>
+  <input type="date" id="date"><br><br>
+  <input type="time" id="time"><br><br>
+  <input type="number" id="guests" placeholder="Guests"><br><br>
+  <button type="submit">Submit</button>
+</form>
+
+<div id="output"></div>
+
+<script>
+function reserve(event) {
+  event.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let date = document.getElementById("date").value;
+  let time = document.getElementById("time").value;
+  let guests = document.getElementById("guests").value;
+
+  if (!name || !date || !time || !guests) {
+    alert("Please fill in all fields");
+    return;
+  }
+
+  document.getElementById("output").innerHTML =
+    `<p>Name: ${name}</p>
+     <p>Date: ${date}</p>
+     <p>Time: ${time}</p>
+     <p>Guests: ${guests}</p>`;
+}
+</script>
+
+</body>
+</html>

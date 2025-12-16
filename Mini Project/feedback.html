@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback</title>
+</head>
+<body>
+
+<h2>Feedback Form</h2>
+
+<form onsubmit="submitFeedback(event)">
+  <input type="text" id="name" placeholder="Name"><br><br>
+  <input type="text" id="email" placeholder="Email"><br><br>
+  <textarea id="message" placeholder="Feedback"></textarea><br><br>
+  <button type="submit">Submit</button>
+</form>
+
+<p id="status"></p>
+<ul id="feedbackList"></ul>
+
+<script>
+let feedbacks = [];
+
+function submitFeedback(event) {
+  event.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+  let status = document.getElementById("status");
+
+  if (!name || !email.includes("@") || message.length <= 5) {
+    status.textContent = "Please enter valid details.";
+    return;
+  }
+
+  feedbacks.push({ name, message });
+  status.textContent = "Feedback submitted successfully!";
+
+  let list = document.getElementById("feedbackList");
+  list.innerHTML = "";
+
+  feedbacks.forEach(fb => {
+    let li = document.createElement("li");
+    li.textContent = fb.name + ": " + fb.message;
+    list.appendChild(li);
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Checker</title>
+</head>
+<body>
+
+<h2>Email Validator</h2>
+
+<form onsubmit="checkEmail(event)">
+  <input type="text" id="email" placeholder="Enter email">
+  <button type="submit">Check</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+function checkEmail(event) {
+  event.preventDefault();
+
+  let email = document.getElementById("email").value;
+  let result = document.getElementById("result");
+
+  if (!email.includes("@") || !email.includes(".")) {
+    result.textContent = "Invalid email format.";
+  } else {
+    result.textContent = "Email accepted!";
+  }
+}
+</script>
+
+</body>
+</html>
